@@ -1,0 +1,893 @@
+@charset "UTF-8";
+@import url("//fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese");
+@import url("//fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&display=swap");
+@import url("//fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;700&display=swap");
+.topTtl {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  font-size: 5vw;
+  font-family: "Cormorant Infant", serif;
+  white-space: wrap;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 481px) {
+  .topTtl {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .topTtl {
+    margin-left: 10%;
+    font-size: 3rem;
+    margin-bottom: 80px;
+  }
+}
+
+.topTtl .topTtlSub {
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ccc;
+  margin-left: 15px;
+  width: 100%;
+  position: relative;
+}
+
+@media screen and (min-width: 1025px) {
+  .topTtl .topTtlSub {
+    margin-left: 30px;
+    padding-bottom: 5px;
+  }
+}
+
+.topTtl .topTtlSub.anim_02 {
+  color: transparent;
+  width: 0;
+  transition: all 1.5s 1s;
+}
+
+.topTtl .topTtlSub.active_02 {
+  color: #000;
+  width: 100%;
+}
+
+.topTtl .anim {
+  transform: translateY(100%);
+  transition: all 1s;
+}
+
+.topTtl .anim.active {
+  transform: translateY(0);
+}
+
+.mainV {
+  width: 100%;
+  /* height: 100vh; */
+  height: 94vh;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV {
+    height: 100vh;
+    padding-left: 88px;
+    margin-bottom: 150px;
+  }
+}
+
+.mainV .mainVImg {
+  display: block;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding-top: 70px;
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVImg {
+    display: inline-flex;
+    padding-top: 0;
+  }
+}
+
+.mainV .mainVImg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.mainV .mainVImg > div {
+  width: 100%;
+  height: 50%;
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVImg > div {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.mainV .mainVImg > div .slidesWrap {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.mainV .mainVImg > div .slidesWrap .slides {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.mainV .mainVImg > div .slidesWrap .slides .slide {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.mainV .mainVImg > div .slidesWrap .slides .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+}
+
+.mainV .mainVWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding-top: 70px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVWrap {
+    padding-left: 88px;
+    padding-top: 0;
+  }
+}
+
+.mainV .mainVWrap .mainVInner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mainV .mainVWrap .mainVInner .mainVCircleTtl {
+  width: 100%;
+  height: 200px;
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVWrap .mainVInner .mainVCircleTtl {
+    height: 300px;
+  }
+}
+
+.mainV .mainVWrap .mainVInner .mainVCircleTtl img {
+  width: 100%;
+  height: 100%;
+}
+
+.mainV .mainVWrap .mainVInner .mainVCircleSub {
+  color: #fff;
+  font-family: "Cormorant Infant", serif;
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  transform: translate(-50%, -27%);
+  display: inline-block;
+  width: 100%;
+  opacity: 0;
+  transition: all 1.5s;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 351px) {
+  .mainV .mainVWrap .mainVInner .mainVCircleSub {
+    letter-spacing: .1em;
+    margin-right: -1em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVWrap .mainVInner .mainVCircleSub {
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    width: auto;
+    letter-spacing: 1em;
+    margin-right: -1em;
+  }
+}
+
+.mainV .mainVWrap .mainVInner .mainVCircleSub.active {
+  opacity: 1;
+}
+
+@media screen and (min-width: 351px) {
+  .mainV .mainVWrap .mainVInner .mainVCircleSub.active {
+    letter-spacing: .8em;
+    margin-right: -.8em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVWrap .mainVInner .mainVCircleSub.active {
+    letter-spacing: 1.5em;
+    margin-right: -1.5em;
+  }
+}
+
+.mainV .mainVWrap .mainVInner .mainVCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+}
+
+.mainV .mainVWrap .mainVInner .mainVCircle.active {
+  opacity: .4;
+}
+
+.mainV .mainVWrap .mainVInner .mainVCircle .circles {
+  height: 45vmin;
+  width: 45vmin;
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate3D(-50%, -50%, 0);
+}
+
+.mainV .mainVWrap .mainVInner .mainVCircle .circles .circle {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2vmin solid transparent;
+  border-radius: 115% 140% 145% 110%/125% 140% 110% 125%;
+  mix-blend-mode: screen;
+}
+
+.mainV .mainVWrap .mainVInner .mainVCircle .circles .circle:nth-child(1) {
+  box-shadow: 0 0 5px 0 #fff inset;
+  transform-origin: 50% 50%;
+  animation: spin1 5.5s linear infinite;
+}
+
+.mainV .mainVWrap .mainVInner .mainVCircle .circles .circle:nth-child(2) {
+  box-shadow: 0 0 10px 0 #fff inset;
+  transform-origin: 50% 50%;
+  animation: spin2 5.5s linear infinite;
+}
+
+.mainV .mainVWrap .mainVInner .mainVCircle .circles .circle:nth-child(3) {
+  box-shadow: 0 0 20px 0 #fff inset;
+  transform-origin: 50% 50%;
+  animation: spin3 5.5s linear infinite;
+}
+
+.mainV .mainVWrap .mainVInner .mainVCircle .circles .circle:nth-child(4) {
+  box-shadow: 0 0 5px 0 #fff inset;
+  transform-origin: 50% 50%;
+  animation: spin4 5.5s linear infinite;
+}
+
+@keyframes spin1 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(72deg);
+  }
+  100% {
+    transform: rotate(-288deg);
+  }
+}
+
+@keyframes spin3 {
+  0% {
+    transform: rotate(-144deg);
+  }
+  100% {
+    transform: rotate(216deg);
+  }
+}
+
+@keyframes spin4 {
+  0% {
+    transform: rotate(216deg);
+  }
+  100% {
+    transform: rotate(-144deg);
+  }
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextL {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVWrap .mainVInner .mainVTextL {
+    left: 5%;
+    bottom: 5%;
+  }
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextL .mainVTextInner {
+  text-align: end;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-align: right;
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVWrap .mainVInner .mainVTextL .mainVTextInner {
+    margin-bottom: 20px;
+  }
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextL .mainVDate {
+  text-align: left;
+  opacity: 0;
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextL.active .mainVDate {
+  opacity: 1;
+  transition: all 1.5s;
+  transition-delay: .8s;
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextL.active .mainVTextInner .mainVTxt {
+  opacity: 1;
+  transition: all 1.5s;
+  transition-delay: .8s;
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextL.active .mainVTextInner .mainVNote {
+  opacity: 1;
+  transition: all 1.5s;
+  transition-delay: .8s;
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextL.active::before {
+  content: '';
+  background: #fff;
+  width: 100%;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: anim 1.5s;
+}
+
+@keyframes anim {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextR {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVWrap .mainVInner .mainVTextR {
+    top: 5%;
+    right: 5%;
+  }
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextR .mainVTextInner {
+  text-align: justify;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVWrap .mainVInner .mainVTextR .mainVTextInner {
+    margin-top: 20px;
+  }
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextR .mainVDate {
+  text-align: right;
+  opacity: 0;
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextR.active .mainVDate {
+  opacity: 1;
+  transition: all 1.5s;
+  transition-delay: .8s;
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextR.active .mainVTextInner .mainVTxt {
+  opacity: 1;
+  transition: all 1.5s;
+  transition-delay: .8s;
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextR.active .mainVTextInner .mainVNote {
+  opacity: 1;
+  transition: all 1.5s;
+  transition-delay: .8s;
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextR.active::before {
+  content: '';
+  background: #fff;
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: anim 1.5s;
+}
+
+@keyframes anim {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+.mainV .mainVWrap .mainVInner .mainVTextInner {
+  color: #fff;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  letter-spacing: .1em;
+}
+
+.mainV .mainVWrap .mainVInner .mainVTxt {
+  font-size: 2rem;
+  font-family: "Noto Serif JP", "游明朝体", "YuMincho", "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN W3", HiraMinProN-W3, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  opacity: 0;
+}
+
+@media screen and (min-width: 481px) {
+  .mainV .mainVWrap .mainVInner .mainVTxt {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVWrap .mainVInner .mainVTxt {
+    font-size: 3.6rem;
+  }
+}
+
+.mainV .mainVWrap .mainVInner .mainVNote {
+  font-size: 1.4rem;
+  font-family: "Noto Serif JP", "游明朝体", "YuMincho", "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN W3", HiraMinProN-W3, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  display: inline-block;
+  opacity: 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVWrap .mainVInner .mainVNote {
+    font-size: 1.6rem;
+  }
+}
+
+.mainV .mainVWrap .mainVInner .mainVDate {
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: "Noto Serif JP", "游明朝体", "YuMincho", "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN W3", HiraMinProN-W3, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+@media screen and (min-width: 1025px) {
+  .mainV .mainVWrap .mainVInner .mainVDate {
+    font-size: 1.6rem;
+  }
+}
+
+.secDouble {
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDouble {
+    margin-bottom: 150px;
+  }
+}
+
+.secDouble .secDoubleTxt {
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDouble .secDoubleTxt {
+    padding: 0;
+    margin: 0 10% 150px 10%;
+  }
+}
+
+.secDouble .secDoubleTxt > .txtEng {
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDouble .secDoubleTxt > .txtEng {
+    margin: 20px 0 100px;
+  }
+}
+
+.secDouble .secDoubleTxt > .btn01 a {
+  margin: 0;
+}
+
+.secDouble .secDoubleInner {
+  display: block;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDouble .secDoubleInner {
+    margin-bottom: 80px;
+  }
+}
+
+.secDouble .secDoubleInner ul li {
+  border-top: 1px solid #eee;
+}
+
+.secDouble .secDoubleInner ul li:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.secDouble .secDoubleInner ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  transition: all .5s;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDouble .secDoubleInner ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-left: 10%;
+    height: 700px;
+  }
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerTxt {
+  width: 100%;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* .secDouble .secDoubleInner ul li a .secDoubleInnerTxt::before {
+  content: '→';
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #888888;
+} */
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerTxt .btn01 .noLink{
+  margin: 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDouble .secDoubleInner ul li a .secDoubleInnerTxt {
+    padding: 0;
+    width: 25%;
+    height: 100%;
+    max-height: 700px;
+    max-width: 30%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .secDouble .secDoubleInner ul li a .secDoubleInnerTxt::before {
+    content: none;
+  }
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerTxt .secDoubleInnerTtl {
+  display: inline-block;
+  font-family: "Noto Serif JP", "游明朝体", "YuMincho", "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN W3", HiraMinProN-W3, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDouble .secDoubleInner ul li a .secDoubleInnerTxt .secDoubleInnerTtl {
+    font-size: 2rem;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+    border-left: 1px solid #ccc;
+    border-bottom: none;
+    margin-bottom: 5%;
+    overflow: hidden;
+    position: relative;
+  }
+  .secDouble .secDoubleInner ul li a .secDoubleInnerTxt .secDoubleInnerTtl::before {
+    content: '';
+    display: inline-block;
+    border-left: 1px solid #000;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+  }
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerTxt .secDoubleInnerTtl span {
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerTxt .secDoubleInnerTtl span::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  max-height: 0;
+  color: #000;
+  content: attr(data-hover);
+  -webkit-transition: max-height .3s;
+  -moz-transition: max-height .3s;
+  transition: max-height .3s;
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerTxt .secDoubleInnerTtl.anim {
+  opacity: 0;
+  transition: all 1s;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDouble .secDoubleInner ul li a .secDoubleInnerTxt .secDoubleInnerTtl.anim {
+    opacity: inherit;
+  }
+  .secDouble .secDoubleInner ul li a .secDoubleInnerTxt .secDoubleInnerTtl.anim::after {
+    content: '';
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 1s;
+  }
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerTxt .secDoubleInnerTtl.anim.active {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDouble .secDoubleInner ul li a .secDoubleInnerTxt .secDoubleInnerTtl.anim.active::after {
+    width: 0;
+  }
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerTxt > div > p {
+  margin-bottom: 20px;
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerImg {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDouble .secDoubleInner ul li a .secDoubleInnerImg {
+    width: 70%;
+    height: 100%;
+  }
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerImg.anim::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1.5s;
+  transition-delay: .5s;
+  z-index: 1;
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerImg.active::before {
+  width: 0;
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerImg > span {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0s;
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerImg .secDoubleInnerImg01 {
+  background: url(/files/img/top/secDoubleInnerImg01.jpeg) center center no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .secDouble .secDoubleInner ul li a .secDoubleInnerImg .secDoubleInnerImg01 {
+    background-image: url(./files/img/top/secDoubleInnerImg01@2x.jpeg);
+  }
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerImg .secDoubleInnerImg02 {
+  background: url(./files/img/top/secDoubleInnerImg02.jpeg) center center no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .secDouble .secDoubleInner ul li a .secDoubleInnerImg .secDoubleInnerImg02 {
+    background-image: url(./files/img/top/secDoubleInnerImg02@2x.jpeg);
+  }
+}
+
+.secDouble .secDoubleInner ul li a .secDoubleInnerImg::after {
+  content: attr(data-txt);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  opacity: 1;
+  font-size: 2rem;
+  font-family: "Cormorant Infant", serif;
+  padding-left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDouble .secDoubleInner ul li a .secDoubleInnerImg::after {
+    font-size: 4.6rem;
+    opacity: 0;
+    transition: all .8s;
+  }
+}
+
+.secDouble .secDoubleInner ul li a:hover .secDoubleInnerTxt .secDoubleInnerTtl::before {
+  content: '';
+  height: 100%;
+}
+
+.secDouble .secDoubleInner ul li a:hover .secDoubleInnerTxt .secDoubleInnerTtl span::after {
+  max-height: 100%;
+}
+
+@media all and (-ms-high-contrast: none) {
+  .secDouble .secDoubleInner ul li a:hover .secDoubleInnerTxt .secDoubleInnerTtl span::after {
+    max-height: 0;
+  }
+}
+
+.secDouble .secDoubleInner ul li a:hover .secDoubleInnerImg > span {
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 1025px) {
+  .secDouble .secDoubleInner ul li a:hover .secDoubleInnerImg::after {
+    opacity: 1;
+  }
+}
+
+.secDaily {
+  background: #f5f5f5;
+  padding: 50px 0;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDaily {
+    padding: 150px 0;
+    margin-bottom: 150px;
+  }
+}
+
+.secDaily .secDailyInner {
+  display: block;
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDaily .secDailyInner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+    padding: 0;
+  }
+}
+
+.secDaily .secDailyInner .secDailyInnerTxt {
+  width: 100%;
+  position: relative;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDaily .secDailyInner .secDailyInnerTxt {
+    width: 36%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+.secDaily .secDailyInner .secDailyInnerTxt > div > p {
+  margin-bottom: 20px;
+}
+
+.secDaily .secDailyInner .secDailyInnerTxt .btn01 a {
+  margin: 0;
+}
+
+.secDaily .secDailyInner .secDailyInnerIns {
+  width: 100%;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 1025px) {
+  .secDaily .secDailyInner .secDailyInnerIns {
+    margin: 0;
+    width: 58%;
+  }
+}
